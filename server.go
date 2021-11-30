@@ -78,6 +78,13 @@ func (c *Channel) Request() *http.Request {
 }
 
 /**
+Get Url Parameters
+*/
+func (c *Channel) GetUrlParams() *http.Request {
+	return c.request.URL.Query()
+}
+
+/**
 Get channel by it's sid
 */
 func (s *Server) GetChannel(sid string) (*Channel, error) {
